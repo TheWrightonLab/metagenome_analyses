@@ -10,9 +10,13 @@
 #	prodigal
 #	usearch
 #	perl_quicklook1.pl
+#	contig_stats.pl
 #	make_contig_cov_file.py
 #	pullseq.py
 #	add_missing_annotations.py
+#
+#	DEPENDENT scripts must me in the same directory or in an executable directory
+#	You can also change directories in the script according to location
 #
 # pipeline from a fasta file of scaffolds to quicklooks
 #
@@ -265,7 +269,7 @@ then
   #awk '{print $1 "\t" $2 "\t" $3 "\t" $4 "\t" ($2*100/$3) }' Contig_coverage_merge_100_paired.txt > $contig_cov_file
 
   #run script to extract info from sam file because above may include reads that do not map
-  python /ORG-Data/scripts/make_contig_cov_file.py -s $scaffold_file -o $contig_cov_file -b All_mappedtoall_paired.sam
+  python make_contig_cov_file.py -s $scaffold_file -o $contig_cov_file -b All_mappedtoall_paired.sam
 
   #remove the 6 bowtie index files
   rm -f scaffold_fa.1.bt2
@@ -338,7 +342,7 @@ fi
 perl_quicklook1.pl ublast_output_2.b6 $contig_cov_file > 1.txt
 
 #add the genes that were not annotated
-python /ORG-Data/scripts/quicklooks/add_missing_annotations.py -i 1.txt -g contigs_$4.genes.faa -o 1.txt.NEW -s $contig_cov_file
+python add_missing_annotations.py -i 1.txt -g contigs_$4.genes.faa -o 1.txt.NEW -s $contig_cov_file
 
 
 #sort col1 version nums in text and then col 2 num
