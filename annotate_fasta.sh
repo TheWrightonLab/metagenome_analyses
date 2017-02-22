@@ -3,10 +3,26 @@
 #  $3 = id
 #
 #   /ORG-Data/scripts/annotate_fasta.sh
+#
 # dependencies are as follows
 # 	prodigal
+#	KEGG
+#	interproscan
+# 	ublast
+# 	uniref
 #	pullcontigs.pl
 #	ANNOTATION_PIPELINE_IPER_OPTION.sh
+#	make_fasta_seq_single_line.py
+#	interproscan_parallel.sh
+#	parallel_PfamScan.py
+#	convert_pfam_to_iperscan.py
+#	reverse_best_hits.sh
+#	perl1.pl
+#	perl2.pl
+#	perl4_NEW.pl
+#	pull_all_contig_annotations.py
+#	perl6.pl
+#	write_annotation_to_fasta.py
 #	
 #	dependent scripts must me in the same directory, or executable from a root directory
 #
