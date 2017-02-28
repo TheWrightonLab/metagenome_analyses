@@ -3,8 +3,8 @@
 #PYTHON SCRIPT 
 #written by: Richard Wolfe
 #
-#to run type: python single_copy_genes.py -i <inputfile> -o <outputfile> -m <min sequence length>
-#         or: ./single_copy_genes.py attributes
+#to run type: python emirge_pipeline.py -f <forwardreads> -r <reversereads> -i <jobid>
+#         -e <emailaddress>
 #
 #   if error: /usr/bin/python^M: bad interpreter: No such file or directory
 #      -there is a windows endl after shebang
