@@ -6,10 +6,11 @@ We have also broken up all of these individual steps into separate repositories 
 
 #Assemblies with IDBA-ud
 This script assembles quality trimmed, joined reads. We use sickle to quality trim our reads.
+https://github.com/najoshi/sickle
 
 This script has the following dependencies:
-IDBA-ud 
-AMPHORA2
+IDBA-ud https://github.com/loneknightpy/idba
+AMPHORA2 https://github.com/martinwu/AMPHORA2
 python
 
 Run this command as follows:
