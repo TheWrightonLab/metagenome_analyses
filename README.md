@@ -152,22 +152,23 @@ Run this command as follows
 
 This script uses AMPHORA2 to call open reading frames and then 
 
-
+You will need to modify this script to call up the scripts from AMPHORA2 (See line 103-106) and the dependent script provided here.
 
 Dependencies
 
-MarkerScanner.pl
-MarkerAlignTrim.pl
-Phylotyping.pl
+AMPHORA2 https://github.com/martinwu/AMPHORA2 
+
+Other dependent scripts:
+
 single_copy_genes_make_table.py
 
--i --input_file   <string>      (required)    
--o --output_file  <string>      (required)       
--e --evalue 	  <string>		(required)
--t --type		  <string>		(required)
+-i --input_file   <string>    (required)    
+-o --output_file  <string>    (required)       
+-e --evalue 	    <string>		(required)
+-t --type		      <string>		(required)
 -p --processors	  <string>		(required)
 -s --seq_type 	  <string>		(required)
--c --OSC		  <string>		(optional)  
+-c --OSC		      <string>		(optional)  
 
 
 
