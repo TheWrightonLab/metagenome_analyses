@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#  /ORG-Data/scripts/quicklooks/QUICKLOOKS_PIPELINE.sh  $1 $2 $3 $4 $5 $6 $7
-#  This script replaced SCAFFOLDS_TO_QUICKLOOKS.sh
+#  /ORG-Data/scripts/quicklooks/QUICKLOOKS_PIPELINE.sh  $1 $2 $3 $4 $5 $6 $7 $8 $9 $10
 #
 # script written by Richard Wolfe
 # dependencies are as follows
