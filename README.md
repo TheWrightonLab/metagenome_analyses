@@ -98,6 +98,4 @@ write_annotation_to_fasta.py
 
 Dependent scripts must me in the same directory, or executable from a root directory.
 
-
-
 #Single copy genes to identify bin completion and misbins
