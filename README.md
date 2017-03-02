@@ -8,9 +8,12 @@ We have also broken up all of these individual steps into separate repositories 
 This script assembles quality trimmed, joined reads. We use sickle to quality trim our reads.
 https://github.com/najoshi/sickle
 
-Dependencies:
+Dependencies
+
 IDBA-ud https://github.com/loneknightpy/idba
-AMPHORA2 https://github.com/martinwu/AMPHORA2
+
+AMPHORA2 https://github.com/martinwu/AMPHORA2 
+
 python
 
 Run this command as follows:
@@ -21,11 +24,14 @@ python idba_ud_wrapper.py -r R1R2_trimmed.fastq -o idba_ud_assembled/
 
 This script uses unassembled quality trimmed reads to reconstruct 16S and estimate abundance
 
-Dependencies: 
+Dependencies
+
 EMIRGE https://github.com/csmiller/EMIRGE
+
 python 2.6
 
-Run this command as follows:
+Run this command as follows
+
 python emirge_pipeline.py -f forwardreads -r reversereads -i jobid -e emailaddress
 
 #Building an OTU table from EMIRGE fasta file in QIIME
@@ -37,15 +43,22 @@ This is a bash script that has 10 positions
 This is the main script: QUICKLOOKS_PIPELINE.sh
 
 Software dependencies
+
   bowtie2
+  
   prodigal
+  
   usearch
   
  Additional script dependencies:
   perl_quicklook1.pl
+  
   contig_stats.pl
+  
   make_contig_cov_file.py
+  
   pullseq.py
+  
   add_missing_annotations.py
   
 These scripts need to be placed in the same directory you are working in or be executable from a root directory. Alternatively you can alter the QUICKLOOKS_PIPELINE.sh script to call to the scripts where you have placed them on your machine.
