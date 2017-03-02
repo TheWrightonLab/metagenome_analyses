@@ -68,45 +68,77 @@ Run this command as follows:
 bash QUICKLOOKS_PIPELINE scaffold.fa forward.reads.fastq reverse.reads.fastq min.length.of.contigs. Job.id BOWTIE email NA threads 0.0001
 
 $1 = path to scaffold.fa file Ex ../scaffold.fa
+
    -this could be a degapped scaffold file such as 100_percent_scaffold_degap
+   
 $2 = path to forward reads Ex  ../../R1_All_trimmed.fastq or NA if NO_BOWTIE
+
 $3 = path to reverse reads Ex: ../../R2_All_trimmed.fastq or NA if NO_BOWTIE
+
 $4 = min length of cotigs  Ex:  1000
+
 $5 = Job ID  Ex: F02_w 
+
    -can be anything (no spaces) just added to front of scaffold as an id
+   
    -ex: F02_4_scafold_67 or F_0_@_scaffold_67
+   
 $6 = BOWTIE or NO_BOWTIE  
+
      note if NO_BOWTIE is used then $2 and $3 can say NA because these files are not used
+     
 $7 = email or NO_EMAIL
+
 $8 = NA if BOWTIE or if NO_BOWTIE and you dont want contig stats
+
      or path to Contig_coverage_score_100_Final_paired.txt (file with stats) when NO_BOWTIE 
+     
 $9 = number of threads
+
 $10 = evalue default should be 0.0001
 
 #annotation pipeline to annotate metagenomic data using KEGG, UniProt, NCBI, PFAM and IPERscan
 
 Software dependencies
-prodigal
-KEGG
-interproscan
-ublast
-uniref
+
+  prodigal
+
+  KEGG
+
+  interproscan
+
+  ublast
+
+  uniref
 
 For sotware, be sure the script calls to the correct database name depending on the software that you have and databases you use. This is completely set up for our server, but should be transferrable with a few tweaks.
 
 Additional dependent scripts:
+
 pullcontigs.pl
+
 ANNOTATION_PIPELINE_IPER_OPTION.sh
+
 make_fasta_seq_single_line.py
+
 interproscan_parallel.sh
+
 parallel_PfamScan.py
+
 convert_pfam_to_iperscan.py
+
 reverse_best_hits.sh
+
 perl1.pl
+
 perl2.pl
+
 perl4_NEW.pl
+
 pull_all_contig_annotations.py
+
 perl6.pl
+
 write_annotation_to_fasta.py
 
 Dependent scripts must me in the same directory, or executable from a root directory.
