@@ -98,6 +98,9 @@ $9 = number of threads
 $10 = evalue default should be 0.0001
 
 #annotation pipeline to annotate metagenomic data using KEGG, UniProt, NCBI, PFAM and IPERscan
+This script takes a scaffold fasta file of nucleic acids, calls genes using prodigal and then annotates those genes against KEGG, NCBI, PFAM and Uniprot databaseses. The result of this script is multiple prodigal files for gene mapping, the specific database hits, and then a summary directory with a text file containing the full annotation, an annotated amino acid fasta file with the best hit for the protein, and an annotated nucleic acid fasta file (genes) with the annotation.
+
+use annotate_fasta.sh
 
 Software dependencies
 
@@ -143,4 +146,30 @@ write_annotation_to_fasta.py
 
 Dependent scripts must me in the same directory, or executable from a root directory.
 
+Run this command as follows
+
 #Single copy genes to identify bin completion and misbins
+
+This script uses AMPHORA2 to call open reading frames and then 
+
+
+
+Dependencies
+
+MarkerScanner.pl
+MarkerAlignTrim.pl
+Phylotyping.pl
+single_copy_genes_make_table.py
+
+-i --input_file   <string>      (required)    
+-o --output_file  <string>      (required)       
+-e --evalue 	  <string>		(required)
+-t --type		  <string>		(required)
+-p --processors	  <string>		(required)
+-s --seq_type 	  <string>		(required)
+-c --OSC		  <string>		(optional)  
+
+
+
+Run this script as follows
+python single_copy_genes.py -i <inputfasta> -o <outputfile> -e <evalue> -t <type> -s <DNA or amino acid> -p <processors> 
