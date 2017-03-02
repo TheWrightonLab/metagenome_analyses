@@ -48,7 +48,7 @@ Software dependencies
   pullseq.py
   add_missing_annotations.py
   
-These scripts need to be placed in the same directory you are working in. Alternatively you can alter the QUICKLOOKS_PIPELINE.sh script to call to the scripts where you have placed them on your machine.
+These scripts need to be placed in the same directory you are working in or be executable from a root directory. Alternatively you can alter the QUICKLOOKS_PIPELINE.sh script to call to the scripts where you have placed them on your machine.
 
 Run this command as follows:
 
@@ -72,6 +72,31 @@ $10 = evalue default should be 0.0001
 
 #annotation pipeline to annotate metagenomic data using KEGG, UniProt, NCBI, PFAM and IPERscan
 
+Software dependencies
+prodigal
+KEGG
+interproscan
+ublast
+uniref
+
+For sotware, be sure the script calls to the correct database name depending on the software that you have and databases you use. This is completely set up for our server, but should be transferrable with a few tweaks.
+
+Additional dependent scripts:
+pullcontigs.pl
+ANNOTATION_PIPELINE_IPER_OPTION.sh
+make_fasta_seq_single_line.py
+interproscan_parallel.sh
+parallel_PfamScan.py
+convert_pfam_to_iperscan.py
+reverse_best_hits.sh
+perl1.pl
+perl2.pl
+perl4_NEW.pl
+pull_all_contig_annotations.py
+perl6.pl
+write_annotation_to_fasta.py
+
+Dependent scripts must me in the same directory, or executable from a root directory.
 
 
 
