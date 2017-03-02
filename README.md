@@ -147,6 +147,11 @@ write_annotation_to_fasta.py
 Dependent scripts must me in the same directory, or executable from a root directory.
 
 Run this command as follows
+bash annotate_fasta.sh scaffold.fa DATABASE ID $1 File to annotate
+
+$2 IPER NO_IPER PFAM
+
+$3 ID for metagenome that will be added to the beginning of all of the scaffolds
 
 #Single copy genes to identify bin completion and misbins
 
